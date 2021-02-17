@@ -10,6 +10,9 @@ A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than
 
 
 <h2> What and Why? </h2>
+
+![Image](https://github.com/sudo-daemon/libre-DL/blob/main/screenshots/macOS/libre-dl-macos.png?raw=true)
+
 Everybody at some point feels the need to download a video, and currently there are three main options. Using a suspicious looking website to download the videos (which not everyone is comfortable with), installing some proprietary extension and letting unverifiable code run in your browser, or using youtube-dl (https://youtube-dl.org),
 
 youtube-dl is by far the best option, but it doesn't have very much adoption outside certain communities, and I believe the main reason for this is because it operates in a command line interface. This could scare away some users. 
