@@ -1,4 +1,4 @@
-# libre-DL
+# 📥 libre-DL
 A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than 4 KB. Contributions welcome. You don't need youtube-dl preinstalled in order to use this. 
 
 <h2> Installation: </h2>
