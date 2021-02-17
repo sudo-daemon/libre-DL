@@ -4,9 +4,7 @@ A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than
 <h2> Installation: </h2>
 1. Download the 'libre-dl.py' file.
 
-
 2. Make sure you have the package 'tk' (Tkinter) installed. It comes preinstalled with most installations of Python but you can install it like this-(https://tkdocs.com/tutorial/install.html).
-
 
 3. Run 'python3 /Path/To/libre-dl.py'
 
