@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import filedialog
 import os
 
-os.system('sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && sudo chmod a+rx /usr/local/bin/youtube-dl')
+os.system('sudo curl -s -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && sudo chmod a+rx /usr/local/bin/youtube-dl')
 
 #Selecting output directory
 def select_output_dir():
