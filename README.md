@@ -2,7 +2,7 @@
 A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than 4 KB. Contributions welcome. You don't need youtube-dl preinstalled in order to use this. 
 
 <h2> Installation: </h2>
-![test](https://imgur.com/a/Ex4HwUs)
+https://imgur.com/a/Ex4HwUs
 <h2> What and Why? </h2>
 Everybody at some point feels the need to download a video, and currently there are three main options. Using a suspicious looking website to download the videos (which not everyone is comfortable with), installing some proprietary extension and letting unverifiable code run in your browser, or using youtube-dl (https://youtube-dl.org),
 
