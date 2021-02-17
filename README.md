@@ -7,7 +7,7 @@ A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than
 3. Run 'python3 /Path/To/libre-dl.py'
 
 <h2> What and Why? </h2>
-Everybody at some point feels the need to download a video, and currently there are three main options. Using a suspicious looking website to download the videos (which not everyone is comfortable with), installing some proprietary extension and letting unverifiable code run in your browser, or using [the youtube-dl tool](https://youtube-dl.org). 
+Everybody at some point feels the need to download a video, and currently there are three main options. Using a suspicious looking website to download the videos (which not everyone is comfortable with), installing some proprietary extension and letting unverifiable code run in your browser, or using [the youtube-dl tool](https://youtube-dl.org),
 
 youtube-dl is by far the best option, but it doesn't have very much adoption outside certain communities, and I believe the main reason for this is because it operates in a command line interface. This could scare away some users. 
 
@@ -41,7 +41,7 @@ There are 3 main objectives for this project;
 
 1. To add options for a slow connection, downloading subtitles, and a persistent record of downloaded videos.
 
-2. To get this script into the main software repositiories, specifically :- [homebrew](brew.sh), [apt](https://wiki.debian.org/Apt), [pip](pypi.org), and the [aur](https://aur.archlinux.org/). 
+2. To get this script into the main software repositiories, specifically :- [homebrew](https://brew.sh), [apt](https://wiki.debian.org/Apt), [pip](https://pypi.org), and the [aur](https://aur.archlinux.org/). 
 
 3. To get over 100 stars on GitHub. I truly see a need for this piece of software, and I want people to know about it. 
 
