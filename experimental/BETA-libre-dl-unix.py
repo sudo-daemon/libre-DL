@@ -1,8 +1,8 @@
 from tkinter import *
 from tkinter import filedialog
 import os
-import shelve
 
+# os.system('sudo curl -s -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && sudo chmod a+rx /usr/local/bin/youtube-dl')
 def youtube_dl_installer():
     # Creates a user prompt to install youtube-dl, not the most elegant solution, but it works for now
     userConfirmation = input("Do you want to install the latest version of youtube-dl? [y/n]: ")
@@ -32,6 +32,27 @@ def get_url():
     downloadButton = Button(root, text="Next", command=lambda: confirm_window())
     downloadButton.grid(row=3, column=3)
 
+
+def download_subtitles():
+    global subtitle_check, var11
+    var11 = IntVar()
+    subtitle_check = Checkbutton(root, text='Subtitles',variable=var11, onvalue=1, offvalue=0)
+    subtitle_check.grid(row=4, column=4)
+
+
+def subsi_download_subtitles(sub1):
+    global token4
+    if sub1 == 1:
+        subtitleCon = Label(sub_window, text="Subtitles: Yes")
+        subtitleCon.pack()
+        token4=True
+    elif sub1 == 0:
+        subtitleCon = Label(sub_window, text="Subtitles: No")
+        subtitleCon.pack()
+        token4=False
+    else:
+        print("We ran into an error. Please restart the application. ")
+
 def confirm_window():
     global url, downloadButton2, sub_window
     url = str(url_official.get())
@@ -44,25 +65,39 @@ def confirm_window():
     formatCon.pack()
     urlCon = Label(sub_window, text="URL: "+ str(url)).pack()
     downloadLocationCon = Label(sub_window, text="Download location: " + folder_selected).pack()
+    # print(var11.get())
+    subsi_download_subtitles(var11.get())
     downloadButton2 = Button(sub_window, text="Download", command=lambda: download_video())
     downloadButton2.pack()
 
-#Issuing the download command with the right parameters
-def download_video():
-    downloadButton2.destroy()
-    waitingForDownload = Label(sub_window, text= "Downloading... ")
-    waitingForDownload.pack()
-    os.system("youtube-dl --quiet -o '" + str(folder_selected) + "%(title)s-%(id)s.%(ext)s'" + ' -f ' + formatString +  ' ' + url )
-    # print("youtube-dl --quiet -o '" + str(folder_selected) + "%(title)s-%(id)s.%(ext)s'" + ' -f ' + formatString +  ' ' + url )
-    waitingForDownload.destroy()
-    doneDownload = Label(sub_window, text= "Download complete. You may now close this window. ").pack()
 
+#Issuing the download command with the right parameters
+
+def download_video():
+    if token4==True:
+        downloadButton2.destroy()
+        waitingForDownload = Label(sub_window, text= "Downloading... ")
+        waitingForDownload.pack()
+        os.system("youtube-dl --quiet --all-subs -o '" + str(folder_selected) + "%(title)s-%(id)s.%(ext)s'" + ' -f ' + formatString +  ' ' + url )
+        # print("youtube-dl --quiet -o '" + str(folder_selected) + "%(title)s-%(id)s.%(ext)s'" + ' -f ' + formatString +  ' ' + url )
+        waitingForDownload.destroy()
+        doneDownload = Label(sub_window, text= "Download complete. You may now close this window. ").pack()
+    elif token4==False:
+        downloadButton2.destroy()
+        waitingForDownload = Label(sub_window, text= "Downloading... ")
+        waitingForDownload.pack()
+        os.system("youtube-dl --quiet -o '" + str(folder_selected) + "%(title)s-%(id)s.%(ext)s'" + ' -f ' + formatString +  ' ' + url )
+        # print("youtube-dl --quiet -o '" + str(folder_selected) + "%(title)s-%(id)s.%(ext)s'" + ' -f ' + formatString +  ' ' + url )
+        waitingForDownload.destroy()
+        doneDownload = Label(sub_window, text= "Download complete. You may now close this window. ").pack()
+    else:
+        print("We've encountered an error. \n Please report an issue on https://github.com/sudo-daemon/libre-DL")
 
 # Dropdown menu for selecting format
 
 def formats_dropdown_menu_maker():
     formatsArray = [
-    "Choose a format",
+    "Choose a format:",
     "mp4",
     "webm",
     "mp3",
@@ -100,12 +135,11 @@ root.title("Libre Downloader")
 
 # Creating a button to activate a dropdown file browser to locate the output directory
 outputChoose = Button(root, text="Select output location", command=lambda: select_output_dir())
-outputChoose.grid(row=2, column=3)
-
 # Calling the required functions
+outputChoose.grid(row=2, column=3)
 youtube_dl_installer()
 get_url()
 formats_dropdown_menu_maker()
-
+download_subtitles()
 # Keeping window running constantly
 root.mainloop()
