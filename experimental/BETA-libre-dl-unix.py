@@ -3,27 +3,13 @@ from tkinter import filedialog
 import os
 import shelve
 
-def youtube_dl_installer(status):
-    """ backFall = shelve.open("dependenciesInstalled")
-    backFall['installed'] = status
-    installStatus = backFall['installed']
-    if installStatus == False:
+def youtube_dl_installer():
+    # Creates a user prompt to install youtube-dl, not the most elegant solution, but it works for now
+    userConfirmation = input("Do you want to install the latest version of youtube-dl? [y/n]: ")
+    if userConfirmation == "y":
         os.system('sudo curl -s -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && sudo chmod a+rx /usr/local/bin/youtube-dl')
-        backFall['installed'] = True
-        youtube_dl_installer(True)
-    elif installStatus == True:
-        print("youtube-dl is already installed. ")
-        get_url()
-        formats_dropdown_menu_maker()
-    else:
-        print("We ran into an error. Quitting... ") """
-    backConfirmation = open('./.backFall.txt', 'r')
-    confirmationStatus = str(backConfirmation.read())
-    if confirmationStatus == "installed":
-        print("youtube-dl already installed. Proceeding...")
-    else:
-        os.system('sudo curl -s -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && sudo chmod a+rx /usr/local/bin/youtube-dl')
-        os.system('echo "installed" >> ./.backFall.txt')
+    elif userConfirmation == "n":
+        print("Understood. Proceeding with current installation of youtube-dl.")
 
 #Selecting output directory
 def select_output_dir():
@@ -117,7 +103,7 @@ outputChoose = Button(root, text="Select output location", command=lambda: selec
 outputChoose.grid(row=2, column=3)
 
 # Calling the required functions
-youtube_dl_installer(False)
+youtube_dl_installer()
 
 # Keeping window running constantly
 root.mainloop()
