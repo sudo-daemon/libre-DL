@@ -104,6 +104,8 @@ outputChoose.grid(row=2, column=3)
 
 # Calling the required functions
 youtube_dl_installer()
+get_url()
+formats_dropdown_menu_maker()
 
 # Keeping window running constantly
 root.mainloop()
