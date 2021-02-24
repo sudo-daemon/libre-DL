@@ -1,7 +1,7 @@
 # 📥 libre-DL
 A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than 4 KB. Contributions welcome. You don't need youtube-dl preinstalled in order to use this. 
 
-![Image](https://github.com/sudo-daemon/libre-DL/blob/main/screenshots/macOS/libre-dl-macos.png?raw=true)
+![Image](https://raw.githubusercontent.com/sudo-daemon/libre-DL/main/screenshots/macOS/libre-dl-macos.png)
 
 <h2> Installation: </h2>
 1. Download the 'libre-DL.py' file for your operating system.
