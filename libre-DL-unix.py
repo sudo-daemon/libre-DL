@@ -29,7 +29,7 @@ def get_url():
 def download_subtitles():
     global subtitle_check, var11
     var11 = IntVar()
-    subtitle_check = Checkbutton(root, text='Subtitles',variable=var11, onvalue=1, offvalue=0)
+    subtitle_check = Checkbutton(root, text='Download subtitles [if available]',variable=var11, onvalue=1, offvalue=0)
     subtitle_check.grid(row=4, column=4)
 
 
