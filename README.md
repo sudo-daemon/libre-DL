@@ -1,10 +1,11 @@
 # 📥 libre-DL
-A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than 4 KB. Contributions welcome. 
+A minimalist GUI wrapper for youtube-dl. Written in python. Contributions welcome. 
 ![Image](https://raw.githubusercontent.com/sudo-daemon/libre-DL/main/screenshots/macOS/libre-dl-macos.png)
 
 <h2> Dependencies: </h2>
 1. 'tkinter':
 Tkinter comes preinstalled with most installations of Python but you can install it like [this](https://tkdocs.com/tutorial/install.html).
+
 2. 'youtube-dl':
 youtube-dl can be downloaded from [here](https://youtube-dl.org)
 
