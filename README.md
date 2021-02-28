@@ -4,7 +4,7 @@ A minimalist GUI wrapper for youtube-dl. Written in python. Contributions welcom
 
 <h2> Dependencies: </h2>
 1. 'tkinter':
-Tkinter comes preinstalled with most installations of Python but you can install it like [this](https://tkdocs.com/tutorial/install.html).
+Tkinter comes preinstalled with most installations of Python but you can install it with these instructions- https://tkdocs.com/tutorial/install.html
 
 2. 'youtube-dl':
 youtube-dl can be downloaded from [here](https://youtube-dl.org)
