@@ -1,14 +1,12 @@
 # 📥 libre-DL
-A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than 4 KB. Contributions welcome. You don't need youtube-dl preinstalled in order to use this. 
-
+A minimalist GUI wrapper for youtube-dl. Written in python. Total size less than 4 KB. Contributions welcome. 
 ![Image](https://raw.githubusercontent.com/sudo-daemon/libre-DL/main/screenshots/macOS/libre-dl-macos.png)
 
-<h2> Installation: </h2>
-1. Download the 'libre-DL.py' file for your operating system.
-
-2. Make sure you have the package 'tk' (Tkinter) installed. It comes preinstalled with most installations of Python but you can install it like this-(https://tkdocs.com/tutorial/install.html).
-
-3. Run 'python3 /Path/To/libre-dl.py'
+<h2> Dependencies: </h2>
+1. 'tkinter':
+Tkinter comes preinstalled with most installations of Python but you can install it like [this](https://tkdocs.com/tutorial/install.html).
+2. 'youtube-dl':
+youtube-dl can be downloaded from [here](https://youtube-dl.org)
 
 
 <h2> What and Why? </h2>
