@@ -9,6 +9,7 @@ Tkinter comes preinstalled with most installations of Python but you can install
 2. 'youtube-dl':
 youtube-dl can be downloaded from [here](https://youtube-dl.org)
 
+<h3>Note:</h3> Please check the issues page.
 
 <h2> What and Why? </h2>
 
